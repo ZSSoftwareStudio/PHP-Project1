@@ -20,7 +20,7 @@ if(!isset($_COOKIE['user'])){
     <div class="container box" style="padding-top: 10%">
         <h1 class="text-center">Welcome to 1st Project with Talbia</h1>
         <h2 class="text-center">Home Page</h2><br><br>
-        <h1 class="text-center text-uppercase bg-success">Welcome Admin!</h1>
+        <h1 class="text-center text-uppercase bg-success">Welcome <?php echo $_COOKIE['user']?></h1>
         <a class="btn btn-danger text-center" href="logout.php">Logout</a>
     <footer class="bg-dark text-white" style="height: 3rem">
         <h1 class="text-center">All Right Reserved | Powered by <a href="https://github.com/ZarifSoftware">ZarifSoftware</a> </h1>
