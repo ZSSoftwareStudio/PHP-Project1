@@ -9,7 +9,7 @@
         setcookie("user", $name, time() + (86400 * 30));
         header("location:home.php");
     }else{
-        echo "<script>alert('Login Credentials are incorrect!');</script>"
+        echo "<script>alert('Login Credentials are incorrect!');</script>";
         header("location:index.php");
     }
 ?>
