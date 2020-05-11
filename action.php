@@ -1,16 +1,15 @@
 <?php
+    include('config.php');
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $user_email = "Zarifprogrammer@gmail.com";
-    $user_password = "12345";
-
-    if($email==$user_email && $password == $user_password){
+    $sql = "SELECT * from `users` WHERE `username`='$name' and `email` == '$email' and `password` == '$password';";
+    $query = mysqli_query($conn, $sql);
+    if(mysqli_num_row($query) > 0){
         setcookie("user", $name, time() + (86400 * 30));
         header("location:home.php");
     }else{
+        echo "<script>alert('Login Credentials are incorrect!');</script>"
         header("location:index.php");
     }
-
-    
 ?>
