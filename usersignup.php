@@ -8,6 +8,8 @@
     if(mysqli_query($conn, $sql)){
         setcookie("user", $name, time() + (86400 * 30));
         header("location:home.php");
+    }else{
+        echo "<script>alert('Something went Wrong! Please Try Again!');</script>";
     }
     
 ?>
